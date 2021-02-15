@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'crm-intra-fev';
+  public title = 'crm-intra-fev';
+  public test = [
+    'chrit',
+    'abu',
+  ];
 }
