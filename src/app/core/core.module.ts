@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginModule } from '../login/login.module';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -16,6 +17,7 @@ import { LoginModule } from '../login/login.module';
   exports: [
     UiModule,
     LoginModule,
+    IconsModule,
     HeaderComponent,
     NavComponent,
     FooterComponent
