@@ -1,0 +1,83 @@
+{
+  "orders": [
+    {
+      "tjmHt": 1200,
+      "nbJours": 10,
+      "tva": 20,
+      "state": "CANCELED",
+      "typePresta": "Coachingff",
+      "client": "Modis",
+      "comment": "Merci Modis trop sympa",
+      "id": 4
+    },
+    {
+      "tjmHt": 1050,
+      "nbJours": 15,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "Coaching",
+      "client": "Capgemini",
+      "comment": "Merci Capgemini ",
+      "id": 5
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 2,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "formation",
+      "client": "Capgemini",
+      "comment": "Merci ",
+      "id": 6
+    }
+  ],
+  "clients": [
+    {
+      "state": "INACTIVE",
+      "tva": 20,
+      "id": 1,
+      "name": "Christophe2",
+      "totalCaHt": 12000,
+      "comment": "un comment pour client christophe2"
+    },
+    {
+      "state": "INACTIVE",
+      "tva": 20,
+      "id": 2,
+      "name": "Modis",
+      "totalCaHt": 120000,
+      "comment": "un comment pour client modis"
+    },
+    {
+      "tva": 20,
+      "state": "ACTIVE",
+      "name": "modis",
+      "totalCaHt": 0,
+      "comment": "rsger",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "user1",
+      "mail": "user1@test.fr",
+      "fakeToken": "smlkdfjmqsjdfmlk"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "user2",
+      "mail": "user2@test.fr",
+      "fakeToken": "mlkjimux"
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "password": "user3",
+      "mail": "user3@test.fr",
+      "fakeToken": "pioupoiusdf"
+    }
+  ]
+}
