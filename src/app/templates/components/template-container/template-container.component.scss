@@ -1,0 +1,11 @@
+@import '~src/stylings/layout';
+
+.bandeau {
+  background: var(--app-primary);
+}
+
+.my-container {
+  max-width: 500px;
+  margin: auto;
+  padding: $gutter;
+}
