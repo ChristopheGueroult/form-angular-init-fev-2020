@@ -8,6 +8,8 @@ import { OrdersService } from 'src/app/core/services/orders.service';
   styleUrls: ['./page-list-orders.component.scss']
 })
 export class PageListOrdersComponent implements OnInit {
+  public title = 'List orders';
+  public headers = ['Type', 'Client', 'Nb Jours', 'Tjm HT', 'Total HT', 'Total TTC', 'State'];
   public collection!: Order[];
   constructor(private orderService: OrdersService) {
     this.orderService.collection.subscribe((datas) => {
