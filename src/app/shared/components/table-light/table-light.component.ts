@@ -1,27 +1,14 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { Order } from 'src/app/core/models/order';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-table-light',
   templateUrl: './table-light.component.html',
-  styleUrls: ['./table-light.component.scss']
+  styleUrls: ['./table-light.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class TableLightComponent implements OnInit, OnChanges {
+export class TableLightComponent {
   @Input() headers!: string[];
-  @Input() collection!: Order[];
   constructor() {
-    console.log(this.headers);
-    console.log(this.collection);
-
-  }
-
-  ngOnChanges(): void {
-    console.log(this.headers);
-    console.log(this.collection);
-  }
-  ngOnInit(): void {
-    console.log(this.headers);
-    console.log(this.collection);
   }
 
 }

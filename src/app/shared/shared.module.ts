@@ -4,11 +4,12 @@ import { TableLightComponent } from './components/table-light/table-light.compon
 import { BtnComponent } from './components/btn/btn.component';
 import { TemplatesModule } from '../templates/templates.module';
 import { IconsModule } from '../icons/icons.module';
+import { StateDirective } from './directives/state.directive';
 
 
 
 @NgModule({
-  declarations: [TableLightComponent, BtnComponent],
+  declarations: [TableLightComponent, BtnComponent, StateDirective],
   imports: [
     CommonModule
   ],
@@ -16,7 +17,8 @@ import { IconsModule } from '../icons/icons.module';
     TemplatesModule,
     IconsModule,
     TableLightComponent,
-    BtnComponent
+    BtnComponent,
+    StateDirective
   ]
 })
 export class SharedModule { }
