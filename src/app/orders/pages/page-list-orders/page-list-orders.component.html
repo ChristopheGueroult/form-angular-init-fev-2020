@@ -1,13 +1,14 @@
 <app-template-fullwidth [title]="title">
+  <!-- {{ collection | json }} -->
   <app-table-light *ngIf="collection" [headers]="headers">
 
     <tr *ngFor="let item of collection">
       <td>{{ item.typePresta }}</td>
-      <td>{{ item.client }}</td>
+      <td>{{ item.client | uppercase   }}</td>
       <td>{{ item.nbJours }}</td>
-      <td>{{ item.tjmHt }}</td>
-      <td>calcul de total ht a faire</td>
-      <td>calcul de total ttc a faire</td>
+      <td>{{ item.tjmHt | currency }}</td>
+      <td>{{ item.tjmHt | total: item.nbJours | currency }}</td>
+      <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency }}</td>
       <td [appState]="item.state">
         <select (change)="changeState(item, $event)">
           <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>

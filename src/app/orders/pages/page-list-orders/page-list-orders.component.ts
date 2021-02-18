@@ -1,3 +1,4 @@
+import { UpperCasePipe } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
@@ -25,6 +26,7 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
       console.log(datas);
       this.collection = datas;
     });
+
   }
 
   ngOnInit(): void {
