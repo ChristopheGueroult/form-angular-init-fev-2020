@@ -6,13 +6,15 @@ import { TemplatesModule } from '../templates/templates.module';
 import { IconsModule } from '../icons/icons.module';
 import { StateDirective } from './directives/state.directive';
 import { TotalPipe } from './pipes/total.pipe';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [TableLightComponent, BtnComponent, StateDirective, TotalPipe],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     TemplatesModule,
