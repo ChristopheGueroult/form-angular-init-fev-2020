@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TableLightComponent } from './components/table-light/table-light.component';
-import { BtnComponent } from './components/btn/btn.component';
-import { TemplatesModule } from '../templates/templates.module';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { IconsModule } from '../icons/icons.module';
+import { TemplatesModule } from '../templates/templates.module';
+import { BtnComponent } from './components/btn/btn.component';
+import { TableLightComponent } from './components/table-light/table-light.component';
 import { StateDirective } from './directives/state.directive';
 import { TotalPipe } from './pipes/total.pipe';
-import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
   exports: [
     TemplatesModule,
     IconsModule,
+    ReactiveFormsModule,
     TableLightComponent,
     BtnComponent,
     StateDirective,

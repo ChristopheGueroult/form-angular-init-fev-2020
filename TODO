@@ -1,0 +1,24 @@
+☐ TP LIST CLIENTS
+
+      "state": "INACTIVE",
+      "tva": 20,
+      "id": 2,
+      "name": "Modis",
+      "totalCaHt": 120000,
+      "comment": "un comment pour client modis"
+
+  ☐ Enum StateClient (ACTIVE, INACTIVE)
+  ☐ Interface ClientI
+  ☐ Model (class) Client (tva = 20, totalCaHt = 0, state = StateClient.INACTIVE)
+  ☐ ClientsService
+  ☐ ListClientsComponent dans le ts (ex sur ListOrdersComponent)
+  ☐ list-clients-component.html
+    ☐ utiliser le même template avec un title "List Clients"
+    ☐ utiliser le même tableau (Name, total ht, total ttc, state)
+    ☐ pour le total ttc on utilise le même pipe total
+    ☐ pour la directive on utilise la même directive StateDirective
+    ☐ les class css state-active, state-inactive à ajouter sur table-light.scss
+    ☐ utiliser le même bouton (text="Add Client" path="add")
+
+
+
