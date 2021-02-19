@@ -14,7 +14,7 @@ const routes: Routes = [
     component: PageAddOrderComponent
   },
   {
-    path: 'edit',
+    path: 'edit/:id',
     component: PageEditOrderComponent
   },
 ];

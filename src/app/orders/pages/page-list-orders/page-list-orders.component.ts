@@ -1,5 +1,6 @@
 import { UpperCasePipe } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
@@ -17,10 +18,14 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
   });
   private sub!: Subscription;
   public title = 'List orders';
-  public headers = ['Type', 'Client', 'Nb Jours', 'Tjm HT', 'Total HT', 'Total TTC', 'State'];
+  public headers = ['Actions', 'Type', 'Client', 'Nb Jours', 'Tjm HT', 'Total HT', 'Total TTC', 'State'];
   // public collection!: Order[];
   public collection$!: Observable<Order[]>;
-  constructor(private orderService: OrdersService) {
+  constructor(
+    private orderService: OrdersService,
+    private router: Router,
+    private cd: ChangeDetectorRef
+  ) {
     this.collection$ = this.orderService.collection;
     // this.orderService.collection.subscribe((datas) => {
     //   console.log(datas);
@@ -38,11 +43,16 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
     );
   }
 
+  public goToEdit(id: number): void {
+    this.router.navigate(['order', 'edit', id]);
+  }
+
   public changeState(item: Order, event: any): void {
     const state = event.target.value;
     this.orderService.changeState(item, state).subscribe((res) => {
       // errors api
       item.state = res.state;
+      this.cd.detectChanges();
     });
   }
 

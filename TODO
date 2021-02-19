@@ -24,3 +24,31 @@
 
 ☐ Pipe async
 ☐ Validators
+
+
+☐ TP EDIT ORDER
+
+  ☐ page-list-orders.component.html
+    ☐ ajoute un td au debut d'un tr et on met un icon-edit dedans
+    ☐ (click)="goToEdit(item.id)"
+  ☐ page-list-orders.component.ts
+    ☐ Ajouter "Actions" en entête
+    ☐ Déclarer fa fn goToEdit(id: number):void et rediriger vers la route orders/edit/3
+    this.router.navigate(['orders', 'edit', id])
+  ☐ order-routing.module.ts
+    ☐ modifier la route edit pour qu'elle autorise un paramètre id après le edit/
+
+  on arrive sur la route orders/edit/3
+  ☐ page-edit-order-component.ts
+    ☐ Récupérer l'id dans la route (ActivatedRoute)
+    ☐ this.ordersService.getItemById(id).subscribe(....flux etant votre item)
+    ☐ dans le subscribe() on recupère le flux et on initialise une propriété item: Order;
+  ☐ orders.service.ts
+    ☐ Déclare la fn getItemById(id: number): Observable<Order>
+  ☐ page-edit-order.component.html
+    ☐ On utilise template-container component
+    ☐ On utilise form-order component : Binder l'@Input() init avec la propriété item (attention à la valeur d'item)
+    ☐ Pour l'@Output() (submited)="edit($event)"
+  ☐ page-edit-order.component.ts
+    ☐ Déclarer la fn edit(item: Order) {utliser this.ordersService.update(item).subscribe(...res api)}
+    ☐ Dans le subscribe, rediriger l'utilisateur vers la route orders
