@@ -18,14 +18,14 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
   private sub!: Subscription;
   public title = 'List orders';
   public headers = ['Type', 'Client', 'Nb Jours', 'Tjm HT', 'Total HT', 'Total TTC', 'State'];
-  public collection!: Order[];
+  // public collection!: Order[];
+  public collection$!: Observable<Order[]>;
   constructor(private orderService: OrdersService) {
-    console.log(this.states);
-
-    this.orderService.collection.subscribe((datas) => {
-      console.log(datas);
-      this.collection = datas;
-    });
+    this.collection$ = this.orderService.collection;
+    // this.orderService.collection.subscribe((datas) => {
+    //   console.log(datas);
+    //   this.collection = datas;
+    // });
 
   }
 
